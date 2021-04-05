@@ -22,9 +22,9 @@ public class Main {
 
         }
         Collections.sort(al);
-        long count = (long)al.get(0).tastiness * speedDifference * al.get(0).distance;
-        int currentDistance = al.get(0).distance;
-        for (int i = 1; i < n; i++) {
+        long count = 0;
+        int currentDistance = 0;
+        for (int i = 0; i < n; i++) {
             if (al.get(i).distance > currentDistance) {
                  count += (long)al.get(i).tastiness * speedDifference * (al.get(i).distance - currentDistance);
                  currentDistance = al.get(i).distance;
